@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	
+    <item
+        android:id="@+id/titlebar_item1"
+        android:showAsAction="ifRoom"
+        android:title="@string/titlebar_item1">
+    </item>
+    <!-- 下单按钮 -->
+	<!-- android:title="@string/titlebar_add"> -->
+	
+     <item
+        android:id="@+id/titlebar_add"
+        android:showAsAction="ifRoom"
+        android:title="增加菜品">
+    </item>
+    
+    
+
+</menu>

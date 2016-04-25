@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_additem_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/buttonstyle"
+          android:orientation="vertical" >
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="0dp" >
+
+            <!--   <TextView
+                  android:id="@+id/activity_menu_items_textView1"
+                  android:layout_width="78dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="5dp"
+                  android:text="商品名称："
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textColor="@color/黑色" /> -->
+
+              <EditText
+                  android:id="@+id/activity_additem_editText1"
+                  android:layout_width="284dp"
+                  android:layout_height="wrap_content"
+                  android:ems="10"
+                  android:layout_marginTop="5dp"
+                  android:hint="请输入商品名称"
+                  android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                 <!--   <requestFocus />-->
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="0dp" >
+
+              <EditText
+                  android:id="@+id/activity_additem_editText2"
+                  android:layout_width="284dp"
+                  android:layout_height="100dp"
+                  android:ems="10"
+                  android:hint="请输入商品描述"
+                  android:layout_marginTop="5dp"
+                  android:inputType="textMultiLine"
+                  android:enabled="true"
+    			  android:gravity="top"
+    			  android:background="@android:drawable/edit_text"
+                  android:textAppearance="?android:attr/textAppearanceSmall" />
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+
+            <!--   <ImageView
+                  android:id="@+id/activity_menu_items_imageView1"
+                  android:layout_width="match_parent"
+                  android:layout_height="180dp"
+                  android:scaleType="center"
+                  android:src="@drawable/ic_launcher" />
+                  -->
+
+              <TextView
+                  android:id="@+id/activity_additem_textView3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="0dp"
+                  android:text=" 商品价格：" />
+
+              <EditText
+                  android:id="@+id/activity_additem_editText4"
+                  android:layout_width="181dp"
+                  android:layout_height="wrap_content"
+                  android:hint="¥"
+                  android:ems="10" />
+              
+ 
+          </LinearLayout>
+
+          <Button
+              android:id="@+id/activity_menu_items_addbutton"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:text="+"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textSize="@android:dimen/app_icon_size" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:gravity="right"
+              android:padding="2dp" >
+
+              <Button
+                  android:id="@+id/activity_menu_items_button1"
+                  style="?android:attr/buttonStyleSmall"
+                  android:layout_width="wrap_content"
+                  android:layout_height="36dp"
+                  android:layout_marginRight="5dp"
+                  android:background="@drawable/buttonstyle"
+                  android:text="分享"
+                  android:visibility="invisible" />
+
+              <Button
+                  android:id="@+id/activity_menu_items_button2"
+                  style="?android:attr/buttonStyleSmall"
+                  android:layout_width="wrap_content"
+                  android:layout_height="36dp"
+                  android:layout_marginRight="5dp"
+                  android:background="@drawable/buttonstyle"
+                  android:text="收藏"
+                  android:visibility="invisible" />
+
+              <Button
+                  android:id="@+id/activity_menu_items_button3"
+                  style="?android:attr/buttonStyleSmall"
+                  android:layout_width="wrap_content"
+                  android:layout_height="36dp"
+                  android:background="@drawable/buttonstylered"
+                  android:text="确认添加"
+                  android:textColor="@color/纯白" />
+          </LinearLayout>
+      </LinearLayout>
+
+    </LinearLayout>
+    
+  </LinearLayout>
