@@ -25,7 +25,7 @@ public class RegisterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
-		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);;
+		//AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);;
 
 		UsersDBManager1 = new UsersDBManager(this);
 		EditText1 = (EditText) findViewById(R.id.activity_register_editText1);

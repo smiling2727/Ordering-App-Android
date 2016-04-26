@@ -33,7 +33,7 @@ public class LoginActivity extends Activity {
 				this.getResources().getDrawable(R.drawable.up));
 		setContentView(R.layout.activity_login);
 		UsersDBManager1 = new UsersDBManager(this);
-		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
+		//AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
 		// 全局变量
 		TinaApplication1 = (TinaApplication) getApplication();
 		TinaApplication1.getInstance().addActivity(this);

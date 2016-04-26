@@ -52,7 +52,7 @@ public class ViewActivity extends Activity {
 		getActionBar().setBackgroundDrawable(
 				this.getResources().getDrawable(R.drawable.up));
 		Bundle1 = this.getIntent().getExtras();
-		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);;
+		//AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);;
 
 		dingDBManager1 = new dingDBManager(this);	
 		strwhere = " id = " + String.valueOf(Bundle1.getInt("id"));

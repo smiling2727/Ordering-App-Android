@@ -68,7 +68,7 @@ public class SubmitActivity extends Activity {
 		Button1 = (Button) findViewById(R.id.activity_submit_button1);// 提交
 
 		EditText1.setText(dingnumDBManager1.gettotalmoney("postdep", "5588"));
-		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);;
+		//AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);;
 
 		Button1.setOnClickListener(new OnClickListener() {
 

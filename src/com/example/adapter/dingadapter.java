@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
@@ -117,7 +119,7 @@ public class dingadapter extends SimpleAdapter {
 			// 点菜
 			viewHolder.Button3 = (Button) v
 					.findViewById(R.id.activity_main_listView1_items_button3);
-			try {
+			try {//要在这里加上对于imageView的imgURL的处理
 				if (!mBusy) {
 					int i = Integer.valueOf(list.get(position).get("_img_url")
 							.toString());
@@ -176,16 +178,35 @@ public class dingadapter extends SimpleAdapter {
 						e.printStackTrace();
 					}
 
-				} else {
-					// Bitmap bitmap = mImageLoader.getBitmapFromCache("");//
+				} else { //加载非预设图片
+					//Bitmap bitmap = mImageLoader.getBitmapFromCache(list.get(position).get("_img_url"));
+					Bitmap bitmap = BitmapFactory.decodeFile(list.get(position).get("_img_url"));
 					// 图片地址
-					// if (bitmap != null) {
-					// viewHolder.mImageView.setImageBitmap(bitmap);
-					// } else {
-					// viewHolder.mImageView
-					// .setImageResource(R.drawable.ic_launcher);
-					// }
+					if (bitmap != null) {
+					viewHolder.mImageView.setImageBitmap(bitmap);
+					} else {
+					viewHolder.mImageView.setImageResource(R.drawable.ic_launcher);
+					}
+					viewHolder.textview1.setText(list.get(position)
+							.get("_title").toString());// 标题
+					viewHolder.textview2.setText("价格:"
+							+ list.get(position).get("_sell_price").toString()
+							+ "元");// 价格
+					try {
+						if (dingDBManager1.queryid(Integer.parseInt(list
+								.get(position).get("_id").toString()))) {
+							viewHolder.Button3.setText("已点");
+							viewHolder.Button3.setEnabled(false);
+						} else {
+							viewHolder.Button3.setText("点菜");
+							viewHolder.Button3.setEnabled(true);
+						}
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				
 				}
+				
 				viewHolder.mImageView.setOnClickListener(new OnClickListener() {
 
 					@Override

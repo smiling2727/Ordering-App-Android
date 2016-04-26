@@ -171,7 +171,7 @@ public class MainActivity extends SlidingFragmentActivity implements
 		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 		getSlidingMenu().setShadowWidthRes(R.dimen.shadow_width);
 		getSlidingMenu().setShadowDrawable(R.drawable.shadow);
-		AseoZdpAseo.initTimer(this, 30);
+		//AseoZdpAseo.initTimer(this, 30);
 		getSlidingMenu().setBehindOffsetRes(R.dimen.slidingmenu_offset);
 		getSlidingMenu().setFadeDegree(0.35f);
 		setContentView(R.layout.activity_main);
@@ -185,7 +185,7 @@ public class MainActivity extends SlidingFragmentActivity implements
 		Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		intent.addCategory(Intent.CATEGORY_HOME);
-		AseoZdpAseo.initFinalTimer(this);
+		//AseoZdpAseo.initFinalTimer(this); //广告
 		startActivity(intent);
 	}
 
@@ -296,7 +296,8 @@ public class MainActivity extends SlidingFragmentActivity implements
 		// 如果小于1则添加测试数据
 		if (dingDBManager.getCount() < 1) {
 			goods dt_goods = new goods();
-			for (int i = 0; i < 10; i++) {
+			//for (int i = 0; i < 10; i++) {
+			for (int i = 0; i < 2; i++) { //设置预设菜品
 				dt_goods = new goods();
 				dt_goods.set_category_id(0);
 				dt_goods.set_title("新品推荐" + i);
